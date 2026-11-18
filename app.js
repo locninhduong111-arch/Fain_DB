@@ -20,8 +20,8 @@
   /* ---------------- data ---------------- */
   async function load() {
     const names = ['bookings', 'kol_ads', 'creators', 'daily', 'sku_shopee', 'meta', 'ads_month'];
-    const res = await Promise.all(names.map(n => fetch('data/' + n + '.json').then(r => r.json())));
-    names.forEach((n, i) => { D[n] = res[i]; });
+    if (window.FORENCOS_DATA) { D = window.FORENCOS_DATA; }
+    else { const res = await Promise.all(names.map(n => fetch('data/' + n + '.json').then(r => r.json()))); names.forEach((n, i) => { D[n] = res[i]; }); }
     $('#updated').textContent = D.meta.updated;
   }
 

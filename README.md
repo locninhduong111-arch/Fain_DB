@@ -18,4 +18,4 @@ vercel --prod
 ```
 
 ## Cập nhật số liệu
-Thay các file trong `data/` rồi commit (Cách 1, Vercel tự deploy lại) hoặc chạy lại `vercel --prod`.
+Thay file `data.js` rồi commit (Cách 1, Vercel tự deploy lại) hoặc chạy lại `vercel --prod`.
