@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>FORENCOS – Marketing Performance</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <div class="brand"><div class="logo">FRC</div><span>FORENCOS</span></div>
+    <nav class="seg" aria-label="Chọn báo cáo">
+      <a href="#booking" data-nav="booking">Booking × Digital</a>
+      <a href="#ecom" data-nav="ecom">Digital × Ecom</a>
+    </nav>
+    <div class="filters" data-for="booking">
+      <select id="m-from" aria-label="Từ tháng"></select><span class="arrow">→</span><select id="m-to" aria-label="Đến tháng"></select>
+    </div>
+    <div class="filters" data-for="ecom" hidden>
+      <input type="date" id="d-from" aria-label="Từ ngày"><span class="arrow">→</span><input type="date" id="d-to" aria-label="Đến ngày">
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <!-- ============ BOOKING × DIGITAL ============ -->
+  <section id="page-booking" class="page">
+    <div class="kpis">
+      <div class="card"><div class="lbl">Chi phí ads</div><div class="big" id="k-ads">—</div><div class="sub">Video book: <span id="k-adsb">—</span></div></div>
+      <div class="card"><div class="lbl">Chi phí booking</div><div class="big" id="k-fee">—</div><div class="sub"><span id="k-nb">—</span> lượt book</div></div>
+      <div class="card"><div class="lbl">ROI <span class="info" title="ROI = Doanh thu ÷ Chi phí ads (video KOC đã book)">ⓘ</span></div><div class="big" id="k-roi">—</div><div class="sub">Gồm phí book: <b id="k-roib">—</b></div></div>
+      <div class="card"><div class="lbl">KOC có ads &gt;100K</div><div class="big"><span id="k-alloc">—</span><span class="of"> / <span id="k-pub">—</span></span></div><div class="sub" id="k-allocp">—</div></div>
+    </div>
+
+    <div class="card strip">
+      <div class="bar" id="st-bar"></div>
+      <div class="legend" id="st-legend"></div>
+    </div>
+
+    <div class="card list">
+      <div class="list-head">
+        <div class="tabs" role="tablist" id="bk-tabs"></div>
+        <div class="pager" data-pager="bk"></div>
+      </div>
+      <div class="tw"><table id="bk-table"></table></div>
+    </div>
+  </section>
+
+  <!-- ============ DIGITAL × ECOM ============ -->
+  <section id="page-ecom" class="page" hidden>
+    <div class="card funnel">
+      <div><div class="lbl">Chi phí ads</div><div class="big" id="e-ads">—</div></div>
+      <div><div class="lbl">Tổng chi phí <span class="info" title="Ads + chi phí Ecom (livestream in-house, hoa hồng affiliate)">ⓘ</span></div><div class="big" id="e-cost">—</div></div>
+      <div><div class="lbl">GMV đặt</div><div class="big" id="e-gmv">—</div></div>
+      <div><div class="lbl">Huỷ + hoàn <span class="info" title="Hiện chỉ có dữ liệu Shopee">ⓘ</span></div><div class="big bad" id="e-lost">—</div></div>
+      <div><div class="lbl">DT đã thanh toán <span class="info" title="Hiện chỉ có dữ liệu Shopee T10/2026">ⓘ</span></div><div class="big good" id="e-paid">—</div></div>
+    </div>
+
+    <div class="duo">
+      <div class="card ch" data-ch="Shopee"></div>
+      <div class="card ch" data-ch="TikTok"></div>
+    </div>
+
+    <div class="card list">
+      <div class="list-head">
+        <h2>Huỷ / hoàn theo SKU <span class="chip">Shopee · T10/2026</span></h2>
+        <div class="pager" data-pager="sku"></div>
+      </div>
+      <div class="tw"><table id="sku-table"></table></div>
+    </div>
+  </section>
+  <p class="foot">Cập nhật <span id="updated">—</span> · Nguồn: Google Sheet MARKETING REPORT 2026, file thống kê shop Shopee</p>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
